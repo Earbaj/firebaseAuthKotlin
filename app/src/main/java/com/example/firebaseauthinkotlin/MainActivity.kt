@@ -12,8 +12,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    companion object{
+        lateinit var auth: FirebaseAuth
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        auth = FirebaseAuth.getInstance()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
